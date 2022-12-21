@@ -41,3 +41,11 @@ in APPPATH\Modules\Account\Controllers\AccountC.php on line 87.
  4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Account\Controllers\AccountC))
  5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 20:45:18 --> Undefined index: level
+in APPPATH\Modules\Account\Models\AccountM.php on line 52.
+ 1 APPPATH\Modules\Account\Models\AccountM.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: level', 'APPPATH\\Modules\\Account\\Models\\AccountM.php', 52, [...])
+ 2 APPPATH\Modules\Account\Controllers\AccountC.php(164): App\Modules\Account\Models\AccountM->edit_data_user_gambar([...], 'uid-63a26a9e6f49a')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Modules\Account\Controllers\AccountC->edit_data_user_gambar()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Account\Controllers\AccountC))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

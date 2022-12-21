@@ -40,10 +40,12 @@ $routes->get('/register', '\App\Modules\Account\Controllers\AccountC::render_reg
 $routes->get('/', '\App\Modules\Account\Controllers\AccountC::render_dashboard');
 $routes->get('/detail-akun/(:any)', '\App\Modules\Account\Controllers\AccountC::render_detail');
 $routes->get('/edit-akun/(:any)', '\App\Modules\Account\Controllers\AccountC::render_edit_akun');
+$routes->get('/ubah-gambar/(:any)', '\App\Modules\Account\Controllers\AccountC::render_edit_akun_gambar');
 
 
 $routes->post('/saveData', '\App\Modules\Account\Controllers\AccountC::save_data_user');
 $routes->post('/editData', '\App\Modules\Account\Controllers\AccountC::edit_data_user');
+$routes->post('/editDataGambar', '\App\Modules\Account\Controllers\AccountC::edit_data_user_gambar');
 $routes->get('/deleteData/(:any)', '\App\Modules\Account\Controllers\AccountC::delete_data_user');
 
 

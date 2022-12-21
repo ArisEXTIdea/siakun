@@ -47,4 +47,9 @@ class AccountM extends Model{
         $this->where('uid', $uid);
         $this->update(); 
      }
+     public function edit_data_user_gambar($data, $uid){
+        $this->set('image', $data['image']);
+        $this->where('uid', $uid);
+        $this->update(); 
+     }
 }

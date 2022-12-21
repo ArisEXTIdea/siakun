@@ -73,6 +73,22 @@ class AccountC extends BaseController{
         return view($this->viewPath . '/form_edit', $renderData);
     }
 
+    public function render_edit_akun_gambar(){
+
+        $url = array_reverse(explode('/', $_SERVER['PHP_SELF']));
+        $uid = $url[0];
+
+        $userData = $this->AccountM->get_data_user($uid);
+
+        $renderData = [
+            'title' => 'Detail Akun | SIAKUN',
+            'userData' => $userData[0]
+        ];
+
+
+        return view($this->viewPath . '/form_edit_gambar', $renderData);
+    }
+
     // -------------- FUNC SECTION -------------------------- //
 
     public function save_data_user(){
@@ -129,6 +145,33 @@ class AccountC extends BaseController{
         return redirect()->to('/detail-akun' . '/' . $uid);
     }
 
+    public function edit_data_user_gambar(){
+
+        $file = $this->request->getFile('image');
+        $fileName =  $file->getRandomName();
+        $file->store('../../public/assets/uploads', $fileName);
+
+        $uid = $this->request->getVar('uid');
+        $ud = $this->AccountM->get_data_user($uid);
+        $userData = $ud[0];
+
+        $putData = [
+            'image' => $fileName
+        ];
+
+        $this->session->setFlashdata('alert', 'active');
+
+        if(!$this->AccountM->edit_data_user_gambar($putData, $uid)){
+            $this->session->setFlashdata('alert-success', 'active');
+            unlink('assets/uploads/' . $userData['image']);
+        } else {
+            $this->session->setFlashdata('alert-fail', 'active');
+
+        }
+
+        return redirect()->to('/detail-akun' . '/' . $uid);
+    }
+
     public function delete_data_user(){
 
         $url = array_reverse(explode('/', $_SERVER['PHP_SELF']));
@@ -144,7 +187,6 @@ class AccountC extends BaseController{
             unlink('assets/uploads/' . $userData['image']);
         } else {
             $this->session->setFlashdata('alert-fail', 'active');
-
         }
 
         return redirect()->to('/');

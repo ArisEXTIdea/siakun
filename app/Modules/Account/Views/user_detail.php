@@ -10,7 +10,7 @@
     </div>
     <div id="content" class="w-full flex flex-col items-center">
         <div id="page-control" class="w-11/12 md:w-2/3 pt-10">
-            <a href="/register" class="py-3 px-5 bg-orange-400 hover:bg-orange-500 rounded text-white">
+            <a href="/" class="py-3 px-5 bg-orange-400 hover:bg-orange-500 rounded text-white">
                 <i class="fas fa-arrow-left mr-1"></i>
                 dashboard
             </a>
@@ -46,6 +46,10 @@
                 <a href="/edit-akun/<?= $userData['uid']?>" class="py-3 px-5 bg-blue-400 hover:bg-blue-500 rounded text-white">
                     <i class="fas fa-edit mr-1"></i>
                     Edit Akun
+                </a>
+                <a href="/ubah-gambar/<?= $userData['uid']?>" class="py-3 px-5 bg-blue-400 hover:bg-blue-500 rounded text-white mx-2">
+                    <i class="fas fa-edit mr-1"></i>
+                    Ubah Gambar
                 </a>
             </div>
             <div id="user-data" class="w-full mt-10">
