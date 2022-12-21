@@ -1,0 +1,43 @@
+CRITICAL - 2022-12-20 18:58:36 --> Undefined variable: title
+in APPPATH\Views\themes\MainContainer.php on line 10.
+ 1 APPPATH\Views\themes\MainContainer.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\themes\\MainContainer.php', 10, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\themes\\MainContainer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('themes\\MainContainer', [], true)
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('\\App\\Modules\\Account\\Views/form_add', [], true)
+ 6 APPPATH\Modules\Account\Controllers\AccountC.php(27): view('\\App\\Modules\\Account\\Views/form_add')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Modules\Account\Controllers\AccountC->render_register()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Account\Controllers\AccountC))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 18:59:09 --> Undefined variable: title
+in APPPATH\Views\themes\MainContainer.php on line 10.
+ 1 APPPATH\Views\themes\MainContainer.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\themes\\MainContainer.php', 10, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\themes\\MainContainer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('themes\\MainContainer', [], true)
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('\\App\\Modules\\Account\\Views/form_add', [], true)
+ 6 APPPATH\Modules\Account\Controllers\AccountC.php(27): view('\\App\\Modules\\Account\\Views/form_add')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Modules\Account\Controllers\AccountC->render_register()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Account\Controllers\AccountC))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 19:40:47 --> Undefined variable: config
+in APPPATH\Modules\Account\Views\form_add.php on line 18.
+ 1 APPPATH\Modules\Account\Views\form_add.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: config', 'APPPATH\\Modules\\Account\\Views\\form_add.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Modules\\Account\\Views\\form_add.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('\\App\\Modules\\Account\\Views/form_add', [], true)
+ 5 APPPATH\Modules\Account\Controllers\AccountC.php(27): view('\\App\\Modules\\Account\\Views/form_add', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Modules\Account\Controllers\AccountC->render_register()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Account\Controllers\AccountC))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 20:06:14 --> unlink(/assets/uploads/1671588014_7267e0692664629b8ed6.jpg): No such file or directory
+in APPPATH\Modules\Account\Controllers\AccountC.php on line 87.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(/assets/uploads/1671588014_7267e0692664629b8ed6.jpg): No such file or directory', 'APPPATH\\Modules\\Account\\Controllers\\AccountC.php', 87, [...])
+ 2 APPPATH\Modules\Account\Controllers\AccountC.php(87): unlink('/assets/uploads/1671588014_7267e0692664629b8ed6.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Modules\Account\Controllers\AccountC->delete_data_user()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Account\Controllers\AccountC))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
